@@ -325,7 +325,7 @@ protected
     if(!multipart?())
       return(@text)
     else
-      body << "This is a multi-part message in MIME format.\r\n\r\n--#{@attachmentboundary}\r\nContent-Type: multipart/alternative; boundary=\"#{@bodyboundary}\""
+      body << "Content-Type: multipart/alternative; boundary=\"#{@bodyboundary}\""
       
       if(@attachments.length > 0)
         # text part
